@@ -35,6 +35,6 @@ class ProfissionaisController extends Controller
      */
     public function list()
     {
-        return Profissional::select('id', 'nome', 'cargo')->where('ativo', 1)->get();
+        return Profissional::select('id', 'nome', 'cargo', 'foto')->where('ativo', 1)->get();
     }
 }
