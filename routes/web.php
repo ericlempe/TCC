@@ -1,12 +1,11 @@
 <?php
 
-	$router->get('/', 'AdminController@index');
 /*
 |--------------------------------------------------------------------------
 | Administrador
 |--------------------------------------------------------------------------
 |
-*/
+*/	
 	$router->post('/admin', 'AdminController@store');
 	$router->delete('/admin/{id}', 'AdminController@delete');
 
@@ -16,9 +15,10 @@
 |--------------------------------------------------------------------------
 |
 */
+	$router->get('/profissionais/{id}/buscar', 'ProfissionaisController@buscar');
+	$router->get('/profissionais/listar', 'ProfissionaisController@list');
 	$router->post('/profissionais', 'ProfissionaisController@store');
 	$router->delete('/profissionais/{id}', 'ProfissionaisController@delete');
-	$router->get('/profissionais/listar', 'ProfissionaisController@list');
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +27,7 @@
 |
 */
 	$router->post('/locais', 'LocaisController@store');
-	$router->get('/locais/coordenadas/{id}', 'LocaisController@get');
+	$router->post('/locais/getCoordenadas', 'LocaisController@getCoordenadas');
 	$router->delete('/locais/{id}', 'LocaisController@delete');
 
 /*

@@ -14,7 +14,7 @@ class CreateLeitor extends Migration
     public function up()
     {
         Schema::create('leitores', function (Blueprint $table) {
-            $table->increments('id')->primary();
+            $table->increments('id');
             $table->string('mac');
             $table->string('fabricante');
             $table->tinyInteger('ativo');

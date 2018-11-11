@@ -27,13 +27,19 @@ class LocaisController extends Controller
         return Local::where('id', $id)->delete();
     }
 
-    /**
-     * Função para listar
-     *
-     * @return void
-     */
-    public function list()
+    public function getCoordenadas(Request $request)
     {
-        return Local::select('nome', 'bloco')->get();
+        $local = Local::find($request->local);
+
+        $local->profissionais()->attach($request->profissional, [
+            'created_at' => date('Y-m-d H:i'),
+            'updated_at' => date('Y-m-d H:i')
+        ]);
+
+        if ($local->save()) {
+            return 1;
+        }else {
+            return 0;
+        }
     }
 }

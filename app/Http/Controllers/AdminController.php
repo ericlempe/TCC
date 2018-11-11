@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Administrador;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use App\Local;
 
 class AdminController extends Controller
 {

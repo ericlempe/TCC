@@ -36,9 +36,4 @@ class LeitoresController extends Controller
     {
         return Leitor::select('id', 'mac')->where('ativo', 1)->get();
     }
-
-    public function get()
-    {
-        
-    }
 }

@@ -14,7 +14,7 @@ class CreateProfissional extends Migration
     public function up()
     {
         Schema::create('profissionais', function (Blueprint $table) {
-            $table->increments('id')->primary();
+            $table->increments('id');
             $table->string('nome');
             $table->string('cargo');
             $table->tinyInteger('ativo');
