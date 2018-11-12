@@ -17,6 +17,7 @@ class CreateTag extends Migration
             $table->increments('id');
             $table->string('mac');
             $table->tinyInteger('ativo');
+            $table->timestamps();
         });
     }
 

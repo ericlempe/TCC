@@ -17,6 +17,9 @@ class CreateLocal extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->string('bloco');
+            $table->string('latitude', 255);
+            $table->string('longitude', 255);
+            $table->timestamps();
         });
     }
 

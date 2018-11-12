@@ -17,6 +17,7 @@ class CreateAdministrador extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->string('senha');
+            $table->timestamps();
         });
     }
 

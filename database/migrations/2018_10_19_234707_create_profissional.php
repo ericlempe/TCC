@@ -18,6 +18,8 @@ class CreateProfissional extends Migration
             $table->string('nome');
             $table->string('cargo');
             $table->tinyInteger('ativo');
+            $table->string('foto', 255);
+            $table->timestamps();
         });
     }
 

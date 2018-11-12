@@ -18,6 +18,7 @@ class CreateLeitor extends Migration
             $table->string('mac');
             $table->string('fabricante');
             $table->tinyInteger('ativo');
+            $table->timestamps();
         });
     }
 
