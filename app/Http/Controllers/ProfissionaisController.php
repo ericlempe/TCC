@@ -35,7 +35,7 @@ class ProfissionaisController extends Controller
      */
     public function list()
     {
-        return Profissional::select('id', 'nome', 'cargo', 'foto')
+        return Profissional::select('id', 'nome', 'categoria_id', 'foto')
             ->where('ativo', 1)
             ->get();
     }
@@ -43,7 +43,7 @@ class ProfissionaisController extends Controller
     public function buscar($id)
     {
         $query =  Local_profissional::from('local_profissional as LP')
-            ->selectRaw('P.nome, P.cargo, P.foto, locais.nome as local_nome, locais.bloco,  locais.latitude, locais.longitude, LP.created_at')
+            ->selectRaw('P.nome, P.categoria_id, P.foto, locais.nome as local_nome, locais.bloco,  locais.latitude, locais.longitude, LP.created_at')
             ->join('locais', 'locais.id', '=', 'LP.local_id')
             ->join('profissionais as P', function ($query) use ($id) {
                 $query->on('P.id', '=', 'LP.profissional_id')

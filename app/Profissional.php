@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Profissional extends Model
 {
     protected $table = "profissionais";
-    protected $fillable = ['nome', 'cargo', 'ativo', 'foto'];
+    protected $fillable = ['nome', 'categoria_id', 'ativo', 'foto'];
 
     public function locais()
     {
