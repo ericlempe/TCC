@@ -15,4 +15,9 @@ class Profissional extends Model
     {
     	return $this->belongsToMany(Local::class);
     }
+
+    public function categoria()
+    {
+    	return $this->belongsTo(Categoria::class);
+    }
 }

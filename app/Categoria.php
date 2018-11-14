@@ -10,4 +10,9 @@ class Categoria extends Model
     protected $table = "categorias";
     protected $fillable = ['nome'];
 
+    public function profissionais()
+    {
+    	return $this->hasMany(Profissional::class);
+    }
+
 }
