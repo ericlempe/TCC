@@ -16,7 +16,7 @@ class CreateProfissional extends Migration
         Schema::create('profissionais', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
-            $table->string('categoria_id');
+            $table->integer('categoria_id');
             $table->tinyInteger('ativo');
             $table->string('foto', 255);
             $table->timestamps();
